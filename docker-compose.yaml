@@ -1,0 +1,32 @@
+version: "2"
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    links:
+      - server
+    networks: [webapp]
+  server:
+    build: ./server
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+    links:
+      - mongo
+    environment:
+      - DB_URL=mongodb://mongo:27017/cosuno
+    networks: [webapp]
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    networks: [webapp]
+networks:
+  webapp:
+    driver: bridge
