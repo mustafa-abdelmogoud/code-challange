@@ -1,4 +1,4 @@
-const URL = "http://localhost:4000/companies";
+const URL = `http://localhost:4000/companies`;
 
 const Company = {
   getCompanies: async () => {
