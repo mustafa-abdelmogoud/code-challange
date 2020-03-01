@@ -4,7 +4,8 @@
 
 ## tech stack
 
-- React (hooks & context API)
+- React
+- state management (react hooks & context API)
 - Antd
 - Node
 - Express
