@@ -4,11 +4,12 @@
 
 ## tech stack
 
-- React
+- React (hooks & context API)
 - Antd
 - Node
 - Express
 - MongoDB
+- Nginx
 - Docker
 - Docker-compose
 
